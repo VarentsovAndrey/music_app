@@ -6,7 +6,7 @@ const currentsongPlaceHolder = {
   cover:
     "https://sun9-59.userapi.com/impf/c98/v98399/f3/VLkI0CTsKo0.jpg?size=350x342&quality=96&sign=29fca08f66575d59a9e89f135dd1b01d&type=album",
   artist: "Герои и злодеи",
-  audio: "https://music.yandex.ru/album/4808573/track/37848214",
+  audio: "https://mp3.chillhop.com/serve.php/?mp3=10075",
   color: ["#205950", "#2ab3bf"],
   id: 1,
   active: true,

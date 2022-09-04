@@ -9,7 +9,7 @@ import {
   faAngleRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-import { setCurrentTime, setIsPlaying, setCurrentSong } from "../actions";
+import { setCurrentTime, setIsPlaying, setCurrentSong } from "../store/actions";
 
 const Player = ({
   songsList,

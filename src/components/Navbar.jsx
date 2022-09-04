@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { setIsLibrary } from "../actions";
+import { setIsLibrary } from "../store/actions";
 
 const Navbar = ({ isLibrary, setIsLibrary, isDarkMode }) => {
   return (

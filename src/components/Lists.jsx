@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { playAudio } from "../util";
 
-import { setCurrentSong } from "../actions";
+import { setCurrentSong } from "../store/actions";
 
 const Lists = ({
   songsList,

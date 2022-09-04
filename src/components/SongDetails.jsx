@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { motion } from "framer-motion";
-import { setCurrentSong } from "../actions";
+import { setCurrentSong } from "../store/actions";
 
 const SongDetails = ({ currentSong, isPlaying }) => {
   if (!currentSong) return <div>Loading..</div>;

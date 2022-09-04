@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { connect } from "react-redux";
+import React, { useRef, useEffect } from "react";
+import { connect, useDispatch } from "react-redux";
 
 import SongDetails from "./components/SongDetails";
 import Player from "./components/Player";
@@ -14,8 +14,9 @@ import {
   setDuration,
   setPercentage,
   setDarkMode,
-} from "./actions";
+} from "./store/actions";
 import { playAudio } from "./util";
+import { fetchTodos } from "./store/getData";
 
 function App({
   songsList,
@@ -30,10 +31,11 @@ function App({
   isDarkMode,
   setDarkMode,
 }) {
-  // //*componentDidMount
-  // useEffect(() => {
-  //   setCurrentSong(songsList[0]);
-  // }, []);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchTodos());
+  }, []);
 
   const onTimeUpdateHandler = () => {
     setCurrentTime(audioRef.current.currentTime);
