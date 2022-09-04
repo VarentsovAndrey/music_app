@@ -1,0 +1,66 @@
+@import "./songs.scss";
+@import "./player";
+@import "./library";
+@import "./navbar";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Lato", sans-serif;
+}
+
+.App {
+	transition: all 1s ease;
+}
+
+.library-active {
+	margin-left: 30%;
+}
+
+.btn-div {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 0.75rem;
+}
+
+.mode-btn {
+	padding: 0.75rem;
+	border-radius: 1rem;
+	outline: none;
+	cursor: pointer;
+}
+
+.dark-btn {
+	background-color: #0d1117;
+	color: #1db954;
+	&:hover {
+		background-color: white;
+	}
+	border: 0.15rem solid #1db954;
+}
+
+.light-btn {
+	background-color: white;
+	color: black;
+	&:hover {
+		background-color: #0d1117;
+		color: white;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.btn-div {
+		margin-top: 0.2rem;
+
+		.mode-btn {
+			padding: 0.5rem;
+		}
+	}
+}
