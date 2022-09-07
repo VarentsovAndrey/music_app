@@ -6,7 +6,7 @@ import Player from "./components/Player";
 import Library from "./components/Library";
 import Navbar from "./components/Navbar";
 import "./styles/app.scss";
-import DarkModeStyle from "./styles/DarkMode";
+import DarkModeStyle from "./components/DarkMode";
 
 import {
   setCurrentSong,
@@ -70,7 +70,7 @@ function App({
           onClick={() => setDarkMode(!isDarkMode)}
           className={`mode-btn ${isDarkMode ? "dark-btn" : "light-btn"}`}
         >
-          {`${isDarkMode ? "Светаля тема" : "Темнаяя тема"}`}
+          {`${isDarkMode ? "Светлая тема" : "Темная тема"}`}
         </button>
       </div>
       <Library audioRef={audioRef} />

@@ -1,7 +1,8 @@
 import { $api } from "../api/axios";
+import { baseURL } from "../api/axios";
 
 export const TodosService = {
-  getTodos: () => $api.get("/data"),
+  getTodos: () => $api.get(baseURL),
 };
 
 const initialState = {

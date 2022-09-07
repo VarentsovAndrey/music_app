@@ -11,7 +11,7 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.27.2",
     "framer-motion": "^4.0.3",
-    "node-sass": "^5.0.0",
+    "node-sass": "^7.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
@@ -27,7 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "json-server": "json-server --watch db.json --port 9000"
+    "json-server": "json-server --watch db.json --port 9000",
+    "dev": "concurrently --kill-others \"npm start\" \"npm run json-server\""
   },
   "eslintConfig": {
     "extends": [

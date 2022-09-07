@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:9000";
+export const baseURL = "http://localhost:9000";
 
 export const $api = axios.create({
-  baseUrl: baseUrl,
+  baseURL: baseURL,
   headers: {
     Authorization: "",
   },

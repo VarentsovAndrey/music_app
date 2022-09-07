@@ -1,11 +1,12 @@
 import { combineReducers } from "redux";
+import { TodosReducer } from "../getData";
 import { data } from "./data";
 
 const currentsongPlaceHolder = {
-  name: "Король и шут",
+  name: "Иван",
   cover:
-    "https://sun9-59.userapi.com/impf/c98/v98399/f3/VLkI0CTsKo0.jpg?size=350x342&quality=96&sign=29fca08f66575d59a9e89f135dd1b01d&type=album",
-  artist: "Герои и злодеи",
+    "https://img1.akspic.ru/crops/2/5/6/9/6/169652/169652-plyazh-more-okean-priroda-voda-3840x2160.jpg",
+  artist: "Иванович",
   audio: "https://mp3.chillhop.com/serve.php/?mp3=10075",
   color: ["#205950", "#2ab3bf"],
   id: 1,
@@ -57,6 +58,7 @@ const isDarkModeReducer = (state = false, action) => {
 
 export default combineReducers({
   songsList: data,
+  test: TodosReducer,
   currentSong: currentSongReducer,
   songInfo: songInfoReducer,
   isplaying: isPlayingReducer,

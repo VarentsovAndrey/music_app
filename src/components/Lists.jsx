@@ -1,21 +1,28 @@
 import React from "react";
-import { connect } from "react-redux";
+import { useSelector } from "react-redux";
 import { playAudio } from "../util";
 
 import { setCurrentSong } from "../store/actions";
+import { useDispatch } from "react-redux";
 
-const Lists = ({
-  songsList,
+const Lists = ({ audioRef }) => {
+  const dispatch = useDispatch();
+  const { test, songsList, isplaying } = useSelector((state) => state);
 
-  setCurrentSong,
-  audioRef,
-  isplaying,
-}) => {
   const onClickHandler = (song) => {
-    setCurrentSong(song);
+    dispatch(setCurrentSong(song));
 
     playAudio(isplaying, audioRef);
   };
+
+  if (test.loading) {
+    return "Loading...";
+  }
+
+  if (test.error) {
+    return "Ошибка";
+  }
+
   const renderlist = songsList.map((song) => {
     return (
       <div
@@ -35,12 +42,4 @@ const Lists = ({
   return <div className="lists">{renderlist}</div>;
 };
 
-const mapStateToProps = (state) => {
-  return {
-    songsList: state.songsList,
-    currentSong: state.currentSong,
-    isplaying: state.isplaying,
-  };
-};
-
-export default connect(mapStateToProps, { setCurrentSong })(Lists);
+export default Lists;
