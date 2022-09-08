@@ -58,7 +58,7 @@ const isDarkModeReducer = (state = false, action) => {
 
 export default combineReducers({
   songsList: data,
-  test: TodosReducer,
+  loading: TodosReducer,
   currentSong: currentSongReducer,
   songInfo: songInfoReducer,
   isplaying: isPlayingReducer,

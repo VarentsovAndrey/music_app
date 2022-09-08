@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 
 const Lists = ({ audioRef }) => {
   const dispatch = useDispatch();
-  const { test, songsList, isplaying } = useSelector((state) => state);
+  const { loading, songsList, isplaying } = useSelector((state) => state);
 
   const onClickHandler = (song) => {
     dispatch(setCurrentSong(song));
@@ -15,11 +15,11 @@ const Lists = ({ audioRef }) => {
     playAudio(isplaying, audioRef);
   };
 
-  if (test.loading) {
+  if (loading.loading) {
     return "Loading...";
   }
 
-  if (test.error) {
+  if (loading.error) {
     return "Ошибка";
   }
 
